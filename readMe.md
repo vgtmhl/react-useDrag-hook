@@ -2,7 +2,7 @@
 
 useDrag is a react hook that allows you to simply make your components draggable without deploying any logic inside the component itself.
 
-![](https://github.com/react-useDrag-hook/sample.gif)
+![Example gif](https://github.com/vgtmhl/react-useDrag-hook/blob/master/sample.gif?raw=true)
 
 
 ## Usage
