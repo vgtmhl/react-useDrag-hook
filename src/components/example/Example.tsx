@@ -1,6 +1,6 @@
 import style from "./Example.module.css"
 
-const Counter = () => {
+const Example = () => {
     return (
         <div className={style.example}>
             Drag me!
@@ -8,4 +8,4 @@ const Counter = () => {
     )
 }
 
-export default Counter
+export default Example
