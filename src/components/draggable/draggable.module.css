@@ -1,0 +1,22 @@
+.draggable {
+    position: absolute;
+
+    height: 200px;
+    width: 450px;
+
+    background-color: rgb(44, 44, 44);
+    border-radius: 1rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 1.5rem;
+}
+
+.draggable:active {
+    border: 1px solid #eee;
+    outline: 3px solid blue;
+}
