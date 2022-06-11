@@ -1,13 +1,14 @@
-import { useState } from 'react'
+import useDrag from '../hooks/useDrag'
 import './App.css'
 import Draggable from './draggable/Draggable'
+import DraggableWithHook from './draggableWithHook/DraggableWithHook'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
       <Draggable />
+      {useDrag(<DraggableWithHook />)}
     </div>
   )
 }
