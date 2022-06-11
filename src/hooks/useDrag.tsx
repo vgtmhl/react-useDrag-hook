@@ -6,15 +6,13 @@ const initialState = {
     dragging: false,
     styles: {
         position: 'absolute',
-    }
+    } as React.CSSProperties
 }
 
 const useDrag = (child: React.ReactNode) => {
-
     const [state, setState] = React.useState<typeof initialState>(initialState)
 
     const onDragStart = (e: React.MouseEvent<HTMLDivElement>) => {
-        /** Calculate the difference between the cursor and the initial position (top left) */
         const diffX = e.screenX - e.currentTarget.getBoundingClientRect().left;
         const diffY = e.screenY - e.currentTarget.getBoundingClientRect().top;
         const dragging = true;
@@ -51,9 +49,12 @@ const useDrag = (child: React.ReactNode) => {
         }))
     }
 
+    const dragClass = `draggable ${state.dragging ? 'dragging' : ''}`;
+
     return (
         <div
-            style={state.styles as any}
+            className={dragClass}
+            style={state.styles}
             onMouseDown={onDragStart}
             onMouseMove={onDragging}
             onMouseUp={onDragStop}

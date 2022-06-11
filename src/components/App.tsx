@@ -1,14 +1,13 @@
 import useDrag from '../hooks/useDrag'
 import './App.css'
-import Draggable from './draggable/Draggable'
-import DraggableWithHook from './draggableWithHook/DraggableWithHook'
+import Example from './example/Example'
+
 
 function App() {
 
   return (
     <div className="App">
-      <Draggable />
-      {useDrag(<DraggableWithHook />)}
+      {useDrag(<Example />)}
     </div>
   )
 }
